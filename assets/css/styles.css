@@ -456,36 +456,6 @@
   background: color-mix(in srgb, var(--surface2) 55%, transparent);
 }
 
-body.hide-notes [data-notes]{
-  display:none !important;
-}
-
-/* Wireframe notes (toggleable commentary layer) */
-.notes{
-  margin-top: 12px;
-  padding: 10px 12px;
-  background: rgba(59, 130, 246, 0.06); /* very soft blue */
-  border: 1px dashed rgba(59, 130, 246, 0.35);
-  border-radius: 12px;
-  font-size: 12px;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-/* "Notes:" label */
-.notes strong{
-  font-weight: 800;
-  color: #1e40af; /* muted blue, NOT red */
-  letter-spacing: .02em;
-}
-
-/* Optional: slightly italic body to reinforce commentary */
-.notes em{
-  font-style: italic;
-}
-
-
-
     .tab {
       border: 1px solid var(--stroke);
       background: var(--surface2);

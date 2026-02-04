@@ -76,7 +76,6 @@
 
 
           <div class="top-tabs" aria-label="Top navigation">
-            <button class="util-btn" type="button" id="toggleNotesBtn">Toggle Notes</button>
           </div>
           <div class="header-utils">
 
@@ -101,9 +100,7 @@
         <!-- DASHBOARD -->
         <section class="screen" id="dashboard" data-pill="Home">
           <h2 class="editable" contenteditable="true" data-edit-id="dash_h2">Dashboard</h2>
-        <div class="notes" data-notes style="margin-top: 12px;">
-          <div class="hint"><strong>Notes:</strong> Main page - central hub/dashboard. Shows what to do for the day, where to focus & how individuals are doing. * Need to figure out display for CC team/same layout? They won't have pipeline -- larger tasks/meetings section?</p></div>
-          <div class="row" style="justify-content:flex-end; margin-top:10px;">
+      
 
 
             <!-- Buttons for Activitines/Sales engine -- don't want to show them on the main dashboard page as they are account specific
@@ -155,9 +152,6 @@
         </div>
       </div>
     </div>
-    <div class="notes" data-notes>
-      <div class="hint"><strong>Notes:</strong> Can pull from Meeting Update suggestions (radio buttons)</div>
-    </div>
   </div>
 
   <!-- RIGHT: Tasks (was Action Required) -->
@@ -198,12 +192,7 @@
         </div>
       </div>
     </div>
-
-    <div class="notes" data-notes>
-      <div class="hint"><strong>Notes:</strong> All can pull in from Task Update Project (radio buttons) </div>
-    </div>
   </div>
-
 </div>
  
           <div class="panel" style="margin-top:14px;">
@@ -235,10 +224,6 @@
                 <div style="font-size:12px;color:var(--muted);">Trending up</div>
               </div>
             </div>
-
-            <div class="notes" data-notes>
-              <div class="hint"><strong>Notes:</strong> KPI cards are editable for management review.</div>
-            </div>
           </div>
 
           <div class="grid" style="margin-top:14px;">
@@ -249,10 +234,6 @@
                 <div class="editable" contenteditable="true" data-edit-id="pipe_forecast">Forecast (Month): $95K</div>
                 <div class="editable" contenteditable="true" data-edit-id="pipe_closing">Closing Next 30 Days: 3 Opportunities</div>
               </div>
-
-              <div class="notes" data-notes>
-                <div class="hint"><strong>Notes:</strong> Replace with stage totals later.</div>
-              </div>
             </div>
 
             <div class="panel">
@@ -261,10 +242,6 @@
                 <button class="btn editable" contenteditable="true" data-edit-id="focus1" data-action="toast" data-message="View stale accounts">Stale Accounts: 6</button>
                 <button class="btn editable" contenteditable="true" data-edit-id="focus2" data-action="toast" data-message="Open action required">Accounts with Action Required: 9</button>
                 <button class="btn editable" contenteditable="true" data-edit-id="focus3" data-action="toast" data-message="Review risks">At Risk: 3</button>
-              </div>
-
-              <div class="notes" data-notes>
-                <div class="hint"><strong>Notes:</strong> These can later deep-link to filtered lists.</div>
               </div>
             </div>
           </div>
@@ -276,21 +253,6 @@
   <div class="accounts-header">
     <div>
       <h2 class="editable" contenteditable="true" data-edit-id="accounts_h2">Accounts Overview</h2>
-<div class="notes" data-notes style="margin-top: 12px;">
-  <div class="hint">
-    <strong>Notes:</strong>
-    <ul>
-      <li>Global view of all accounts</li>
-      <li>Clicking into an account opens Sales Engine + SPS</li>
-      <li>Do we want users to create new accounts from this page?</li>
-      <li>Current way causes duplications/error for Shirley in Princess</li>
-      <li>"Accounts with Action Required" will be applicable to every Account</li>
-    </ul>
-  </div>
-</div>
-
-
-
     <!-- secondary nav from screenshot -- unnecessary but these are also the only buttons 
     we need to work on now * -pipeline
     <div class="accounts-mini-nav">
@@ -465,10 +427,6 @@
       </div>
     </div>
   </div>
-
-  <div class="notes" data-notes style="margin-top: 12px;">
-    <div class="hint"><strong>Notes:</strong> "Tabs filter rows. Search filters by account/industry/contact? All headers?. Questions around Primary Contact + Last Contact/Last Activity tie ins.</div>
-  </div>
 </section>
 
 
@@ -515,10 +473,6 @@
         </div>
 
         <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_org_link">View Org Chart</div>
-
-        <div class="notes" data-notes>
-          <div class="hint"><strong>Notes:</strong> Summary card mirrors your wireframe. Left column stays “account facts”.</div>
-        </div>
       </div>
 
       <div class="panel">
@@ -904,20 +858,12 @@
                 <button class="btn primary" data-go="dashboard" type="button">Save → Dashboard</button>
                 <button class="btn" data-go="dashboard" type="button">Cancel → Dashboard</button>
               </div>
-
-              <div class="notes" style="margin-top: 12px;" data-notes>
-                <div class="hint"><strong>Notes:</strong> Add more settings groups (profile, billing, privacy, etc.).</div>
-              </div>
             </div>
 
             <div class="panel">
               <h3 style="margin: 0 0 10px; font-size: 14px;" class="editable" contenteditable="true" data-edit-id="settings_about_h3">About</h3>
               <p class="editable" contenteditable="true" data-edit-id="settings_about_p" style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5;">
-                This prototype is intentionally simple. It’s meant for testing flow, not visuals.
               </p>
-              <div class="notes" style="margin-top: 12px;" data-notes>
-                <div class="hint"><strong>Notes:</strong> You can paste copy here to test tone & clarity.</div>
-              </div>
             </div>
           </div>
         </section>
@@ -1018,10 +964,7 @@ const screensEl = document.getElementById('screens');
 const navEl = document.getElementById('nav');
 const toastEl = document.getElementById('toast');
 const historyStack = [];
-
 let currentScreenId = 'dashboard';
-let notesHidden = true;
-
 
     function showToast(message) {
       toastEl.textContent = message;
@@ -1299,15 +1242,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
-
-    function applyNotesVisibility() {
-      document.querySelectorAll('[data-notes]').forEach(el => {
-        if (notesHidden) el.classList.add('hidden');
-        else el.classList.remove('hidden');
-      });
-    }
-
     function showScreen(id, { pushHistory = true } = {}) {
       const next = document.getElementById(id);
       if (!next) {
@@ -1325,7 +1259,6 @@ document.addEventListener('click', (e) => {
       currentScreenId = id;
       setActiveNav(id);
 
-      applyNotesVisibility();
       window.location.hash = id;
     }
 
@@ -1351,16 +1284,6 @@ document.addEventListener('click', (e) => {
         }
       }
     });
-
- 
-
-if (toggleNotesBtn) {
-  toggleNotesBtn.addEventListener('click', () => {
-    notesHidden = !notesHidden;
-    applyNotesVisibility();
-    showToast(notesHidden ? 'Notes hidden' : 'Notes shown');
-  });
-}
 
 
     // --- Inline editing: persist edits in localStorage ---
