@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clickable Wireframe Test 1</title>
-
-
+  <title>CRM revamp 2026 </title>
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
 </head>
@@ -1019,16 +1017,10 @@
 const screensEl = document.getElementById('screens');
 const navEl = document.getElementById('nav');
 const toastEl = document.getElementById('toast');
-
-const toggleNotesBtn = document.getElementById('toggleNotesBtn');
-if (toggleNotesBtn) {
-  toggleNotesBtn.addEventListener('click', () => {
-    document.body.classList.toggle('hide-notes');
-  });
-}
 const historyStack = [];
+
 let currentScreenId = 'dashboard';
-let notesHidden = false;
+let notesHidden = true;
 
 
     function showToast(message) {
