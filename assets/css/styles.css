@@ -1,4 +1,3 @@
-  <style>
     :root {
       /* Light theme (default) */
       --bg: #f4f6fb;
@@ -1329,6 +1328,3 @@ body.hide-notes [data-notes]{
   border-color: color-mix(in srgb, var(--focus) 55%, transparent);
   font-weight: 900;
 }
-
-
-  </style>
