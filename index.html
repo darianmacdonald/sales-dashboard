@@ -91,20 +91,9 @@
         </div>-->
       </header>
 
-      <div class="screen-wrap" id="screens">
-        <!-- DASHBOARD -->
+            <div class="screen-wrap" id="screens">
+        <!-- DASHBOARD (landing) -->
         <section class="screen" id="dashboard" data-pill="Home">
-          
-            <!-- <h2 class="editable" contenteditable="true" data-edit-id="dash_h2">Dashboard</h2>
-      
-
-Buttons for Activitines/Sales engine -- don't want to show them on the main dashboard page as they are account specific
-  <button class="btn" type="button" data-open-activity="call">Schedule Call</button>
-  <button class="btn" type="button" data-open-activity="meeting">Schedule Meeting</button>
-  <button class="btn" type="button" data-open-activity="task">Create Task</button>-->
-</section>
-    </div>
-          
 <div class="grid" style="margin-top: 12px;">
 
   <!-- LEFT: Today's Meetings -->
@@ -239,628 +228,563 @@ Buttons for Activitines/Sales engine -- don't want to show them on the main dash
               </div>
             </div>
           </div>
+        
+        </div>
         </section>
 
-        <!-- ACCOUNTS -->
-
-<section class="screen hidden" id="accounts" data-pill="S2">
-  <div class="accounts-header">
-    <div>
-      <h2 class="editable" contenteditable="true" data-edit-id="accounts_h2">Accounts Overview</h2>
-    <!-- secondary nav from screenshot -- unnecessary but these are also the only buttons 
-    we need to work on now * -pipeline
-    <div class="accounts-mini-nav">
-      <div class="seg" aria-label="Accounts mini navigation">
-        <button class="seg-btn" type="button" data-go="dashboard">Dashboard</button>
-        <button class="seg-btn" type="button" aria-current="page">Accounts</button>
-        <button class="seg-btn" type="button" data-go="pipeline">Pipeline</button>
-      </div>
-    </div>
-  </div>-->
-
-  <div class="accounts-card">
-    <div class="accounts-toolbar">
-      <div class="label editable" contenteditable="true" data-edit-id="acct_list_label">My Accounts </div>
-
-      <div class="accounts-tabs" role="tablist" aria-label="Account list tabs">
-        <button class="pilltab" type="button" data-acct-tab="action">Action Required</button>
-        <button class="pilltab" type="button" data-acct-tab="open">Open Opportunities</button>
-        <button class="pilltab" type="button" data-acct-tab="stale">Stale</button>
-      </div>
-
-      <div class="accounts-toolbar-right">
-        <input class="search" id="acctSearch" type="search" placeholder="Search accounts..." aria-label="Search accounts" />
-        <button class="btn dark" type="button" data-action="toast" data-message="New account">New</button>
-        <button class="btn" type="button" data-action="toast" data-message="Filter panel">Filter</button>
-      </div>
-    </div>
-
-    <div class="table" id="acctTable">
-      <div class="thead">
-        <div>Account Name</div>
-        <div class="hide-sm">Industry</div>
-        <div>Score</div>
-        <div class="hide-sm">Open Opps</div>
-        <div class="hide-sm">Pipeline</div>
-        <div class="hide-sm">Primary Contact</div>
-        <div class="hide-sm">Last Contact</div>
-        <div class="hide-sm">Last Activity</div>
-        <div></div>
-      </div>
-
-      <!-- Row 1 -->
-      <div class="trow" data-acct-status="my action open" data-acct-name="Town of Leland" data-acct-industry="Government" data-acct-contact="Marina Wells">
-        <div class="cell">
-          <div class="account-name editable" contenteditable="true" data-edit-id="acct1_name" data-action="toast" data-message="Open account: Town of Leland">Northbound Labs</div>
-          <div class="account-meta editable" contenteditable="true" data-edit-id="acct1_meta">AM: Allan</div>
-        </div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_industry"><strong>Engineering</strong></div>
-        <div class="cell"><span class="score-chip good editable" contenteditable="true" data-edit-id="acct1_score">82</span></div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_opps">2</div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_pipe">$165,000</div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct1_contact"><strong>Marina Wells</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct1_role">IT Director</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct1_last">Jan 08</div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct1_last_type">Call</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct1_activity"><strong>Meeting</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct1_activity_sub">Discovery</div>
-          </div>
-        </div>
-        <div class="ar-pill editable" contenteditable="true" data-edit-id="acct1_ar">AR: 3</div>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="trow" data-acct-status="my action open" data-acct-name="City of Lenoir" data-acct-industry="Government" data-acct-contact="Ben — IT">
-        <div class="cell">
-          <div class="account-name editable" contenteditable="true" data-edit-id="acct2_name" data-action="toast" data-message="Open account: City of Lenoir">Wakefield Tech</div>
-          <div class="account-meta editable" contenteditable="true" data-edit-id="acct2_meta">AM: Allan</div>
-        </div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_industry"><strong>Government</strong></div>
-        <div class="cell"><span class="score-chip warn editable" contenteditable="true" data-edit-id="acct2_score">74</span></div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_opps">1</div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_pipe">$140,000</div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct2_contact"><strong>Sandy Banks</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct2_role">Systems Administrator</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct2_last">Jan 03</div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct2_last_type">Email</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct2_activity"><strong>Quote</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct2_activity_sub">Emailed 20261283-4</div>
-          </div>
-        </div>
-        <div class="ar-pill editable" contenteditable="true" data-edit-id="acct2_ar">AR: 1</div>
-      </div>
-
-      <!-- Row 3 -->
-      <div class="trow" data-acct-status="my open" data-acct-name="Sunklink" data-acct-industry="Technology" data-acct-contact="Chris Harper">
-        <div class="cell">
-          <div class="account-name editable" contenteditable="true" data-edit-id="acct3_name" data-action="toast" data-message="Open account: Sunklink">Anchorpoint Systems</div>
-          <div class="account-meta editable" contenteditable="true" data-edit-id="acct3_meta">AM: Allan</div>
-        </div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_industry"><strong>Aerospace</strong></div>
-        <div class="cell"><span class="score-chip good editable" contenteditable="true" data-edit-id="acct3_score">88</span></div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_opps">1</div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_pipe">$100,000</div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct3_contact"><strong>Deckard Hull</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct3_role">Technical Lead</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct3_last">Dec 28</div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct3_last_type">Call</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct3_activity"><strong>Follow-up</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct3_activity_sub">Scheduled</div>
-          </div>
-        </div>
-        <div class="ar-pill editable" contenteditable="true" data-edit-id="acct3_ar">AR: 0</div>
-      </div>
-
-      <!-- Row 4 -->
-      <div class="trow" data-acct-status="action open stale" data-acct-name="IMP Solutions (HRM)" data-acct-industry="Partner / Gov" data-acct-contact="IMP Team">
-        <div class="cell">
-          <div class="account-name editable" contenteditable="true" data-edit-id="acct4_name" data-action="toast" data-message="Open account: IMP Solutions (HRM)">Mooring Digital</div>
-          <div class="account-meta editable" contenteditable="true" data-edit-id="acct4_meta">AM: Allan</div>
-        </div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_industry"><strong>Manufacturing</strong></div>
-        <div class="cell"><span class="score-chip bad editable" contenteditable="true" data-edit-id="acct4_score">61</span></div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_opps">2</div>
-        <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_pipe">$220,000</div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct4_contact"><strong>Cole Current</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct4_role">Creative Director</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct4_last">Dec 15</div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct4_last_type">Call</div>
-          </div>
-        </div>
-        <div class="cell hide-sm">
-          <div class="stack">
-            <div class="editable" contenteditable="true" data-edit-id="acct4_activity"><strong>Stale</strong></div>
-            <div class="muted editable" contenteditable="true" data-edit-id="acct4_activity_sub">No activity completed in 24d</div>
-          </div>
-        </div>
-        <div class="ar-pill editable" contenteditable="true" data-edit-id="acct4_ar">AR: 4</div>
-      </div>
-    </div>
-
-    <div class="table-footer">
-      <div class="editable" contenteditable="true" data-edit-id="acct_pagination_left">1–4 of 24</div>
-      <div class="pager">
-        <a data-action="toast" data-message="Previous page">Previous</a>
-        <a data-action="toast" data-message="Next page">Next</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ACCOUNT DETAIL (new full screen) -->
-<section class="screen hidden" id="account-detail" data-pill="Acct">
-  <!-- Header -->
-  <div class="acctd-head">
-    <div>
-      <h2 id="acctdName" class="editable" contenteditable="true" data-edit-id="acctd_name">Town of Leland</h2>
-      <div class="acctd-sub editable" contenteditable="true" data-edit-id="acctd_sub">
-        AM: Allan Hillier AE:
-      </div>
-    </div>
-
-<button class="acctd-back" type="button" data-go="accounts">
-  ← Accounts overview
-</button>
-
-  </div>
-
-  <!-- 3-column grid -->
-  <div class="acctd-grid">
-    <!-- LEFT COLUMN -->
-    <div class="acctd-col">
-      <div class="panel">
-        <div class="panel-title">ACCOUNT SUMMARY</div>
-        <div class="kv">
-          <div class="k">Account:</div>
-          <div class="v editable" id="acctdSumAccount" contenteditable="true" data-edit-id="acctd_sum_account">Town of Leland</div>
-
-          <div class="k">AM:</div>
-          <div class="v editable" id="acctdSumAM" contenteditable="true" data-edit-id="acctd_sum_AM">Allan Hillier</div>
-
-          <div class="k">Sub Accounts:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_sub">3</div>
-
-          <div class="k">Opportunities:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_opps">2 open</div>
-
-          <div class="k">Inquiries:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_inq">7</div>
-        </div>
-
-        <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_org_link">View Org Chart</div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">SUB ACCOUNTS</div>
-        <ul class="bullets editable" contenteditable="true" data-edit-id="acctd_subaccounts">
-          <li>IT Department</li>
-          <li>Finance Department</li>
-          <li>Research Lab</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">OPPORTUNITIES</div>
-
-        <div class="opp">
-          <div class="opp-name editable" contenteditable="true" data-edit-id="acctd_opp1_name">NAS Refresh - 480TB</div>
-          <div class="opp-meta editable" contenteditable="true" data-edit-id="acctd_opp1_meta">Stage: Discovery • Value: $120,000</div>
-        </div>
-
-        <div class="opp">
-          <div class="opp-name editable" contenteditable="true" data-edit-id="acctd_opp2_name">Backup Expansion</div>
-          <div class="opp-meta editable" contenteditable="true" data-edit-id="acctd_opp2_meta">Stage: Quote • Value: $45,000</div>
-        </div>
-
-        <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_view_all_opps">View all opportunities</div>
-      </div>
-    </div>
-
-    <!-- CENTER COLUMN -->
-    <div class="acctd-col">
-      <div class="panel">
-        <div class="panel-title">SALES ENGINE</div>
-
-        <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:10px;">
-          <div class="mini-label">ACTIVITIES</div>
-          <div class="acctd-actions">
-            <!--Commenting out for new fields Roger suggested on Feb 3rd ----- <button class="mini dark" type="button" data-action="toast" data-message="Place Call">Place Call</button>
-            <button class="mini" type="button" data-action="toast" data-message="Schedule Meeting">Schedule Meeting</button>
-            <button class="mini" type="button" data-action="toast" data-message="Create Task">Create Task</button>
-            <button class="mini" type="button" data-action="toast" data-message="Log Note">Log Note</button>-->
-<button class="mini dark" type="button" data-open-activity="call">Schedule Call</button>
-<button class="mini" type="button" data-open-activity="meeting">Schedule Meeting</button>
-<button class="mini" type="button" data-open-activity="task">Create Task</button>
-
-
-
-
-
-
-
-
-
-
-
-
-          </div>
-        </div>
-
-        <div class="mini-label" style="margin:12px 0 8px;">ACTION REQUIRED</div>
-
-        <div class="arlist">
-          <div class="aritem">
-            <span class="chk" aria-hidden="true"></span>
-            <div class="ar-main">
-              <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar1_title">Send recap email to Alex</div>
-              <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar1_meta">Triggered by: Meeting completed • Due: Today</div>
+        <section class="screen hidden" id="accounts" data-pill="S2">
+          <div class="accounts-header">
+            <div>
+              <h2 class="editable" contenteditable="true" data-edit-id="accounts_h2">Accounts Overview</h2>
+            <!-- secondary nav from screenshot -- unnecessary but these are also the only buttons 
+            we need to work on now * -pipeline
+            <div class="accounts-mini-nav">
+              <div class="seg" aria-label="Accounts mini navigation">
+                <button class="seg-btn" type="button" data-go="dashboard">Dashboard</button>
+                <button class="seg-btn" type="button" aria-current="page">Accounts</button>
+                <button class="seg-btn" type="button" data-go="pipeline">Pipeline</button>
+              </div>
             </div>
-            <span class="tag hot editable" contenteditable="true" data-edit-id="acctd_ar1_tag">HOT</span>
-          </div>
+          </div>-->
 
-          <div class="aritem">
-            <span class="chk" aria-hidden="true"></span>
-            <div class="ar-main">
-              <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar2_title">Update opportunity stage: Discovery → Quote</div>
-              <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar2_meta">Triggered by: Quote requested • Due: Tomorrow</div>
+          <div class="accounts-card">
+            <div class="accounts-toolbar">
+              <div class="label editable" contenteditable="true" data-edit-id="acct_list_label">My Accounts </div>
+
+              <div class="accounts-tabs" role="tablist" aria-label="Account list tabs">
+                <button class="pilltab" type="button" data-acct-tab="action">Action Required</button>
+                <button class="pilltab" type="button" data-acct-tab="open">Open Opportunities</button>
+                <button class="pilltab" type="button" data-acct-tab="stale">Stale</button>
+              </div>
+
+              <div class="accounts-toolbar-right">
+                <input class="search" id="acctSearch" type="search" placeholder="Search accounts..." aria-label="Search accounts" />
+                <button class="btn dark" type="button" data-action="toast" data-message="New account">New</button>
+                <button class="btn" type="button" data-action="toast" data-message="Filter panel">Filter</button>
+              </div>
             </div>
-            <span class="tag warm editable" contenteditable="true" data-edit-id="acctd_ar2_tag">WARM</span>
-          </div>
 
-          <div class="aritem">
-            <span class="chk" aria-hidden="true"></span>
-            <div class="ar-main">
-              <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar3_title">Follow up on quote for Jimmy</div>
-              <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar3_meta">Triggered by: Quote sent • Due: 3 days</div>
+            <div class="table" id="acctTable">
+              <div class="thead">
+                <div>Account Name</div>
+                <div class="hide-sm">Industry</div>
+                <div>Score</div>
+                <div class="hide-sm">Open Opps</div>
+                <div class="hide-sm">Pipeline</div>
+                <div class="hide-sm">Primary Contact</div>
+                <div class="hide-sm">Last Contact</div>
+                <div class="hide-sm">Last Activity</div>
+                <div></div>
+              </div>
+
+              <!-- Row 1 -->
+              <div class="trow" data-acct-status="my action open" data-acct-name="Town of Leland" data-acct-industry="Government" data-acct-contact="Marina Wells">
+                <div class="cell">
+                  <div class="account-name editable" contenteditable="true" data-edit-id="acct1_name" data-action="toast" data-message="Open account: Town of Leland">Northbound Labs</div>
+                  <div class="account-meta editable" contenteditable="true" data-edit-id="acct1_meta">AM: Allan</div>
+                </div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_industry"><strong>Engineering</strong></div>
+                <div class="cell"><span class="score-chip good editable" contenteditable="true" data-edit-id="acct1_score">82</span></div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_opps">2</div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct1_pipe">$165,000</div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct1_contact"><strong>Marina Wells</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct1_role">IT Director</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct1_last">Jan 08</div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct1_last_type">Call</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct1_activity"><strong>Meeting</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct1_activity_sub">Discovery</div>
+                  </div>
+                </div>
+                <div class="ar-pill editable" contenteditable="true" data-edit-id="acct1_ar">AR: 3</div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="trow" data-acct-status="my action open" data-acct-name="City of Lenoir" data-acct-industry="Government" data-acct-contact="Ben — IT">
+                <div class="cell">
+                  <div class="account-name editable" contenteditable="true" data-edit-id="acct2_name" data-action="toast" data-message="Open account: City of Lenoir">Wakefield Tech</div>
+                  <div class="account-meta editable" contenteditable="true" data-edit-id="acct2_meta">AM: Allan</div>
+                </div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_industry"><strong>Government</strong></div>
+                <div class="cell"><span class="score-chip warn editable" contenteditable="true" data-edit-id="acct2_score">74</span></div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_opps">1</div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct2_pipe">$140,000</div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct2_contact"><strong>Sandy Banks</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct2_role">Systems Administrator</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct2_last">Jan 03</div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct2_last_type">Email</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct2_activity"><strong>Quote</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct2_activity_sub">Emailed 20261283-4</div>
+                  </div>
+                </div>
+                <div class="ar-pill editable" contenteditable="true" data-edit-id="acct2_ar">AR: 1</div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="trow" data-acct-status="my open" data-acct-name="Sunklink" data-acct-industry="Technology" data-acct-contact="Chris Harper">
+                <div class="cell">
+                  <div class="account-name editable" contenteditable="true" data-edit-id="acct3_name" data-action="toast" data-message="Open account: Sunklink">Anchorpoint Systems</div>
+                  <div class="account-meta editable" contenteditable="true" data-edit-id="acct3_meta">AM: Allan</div>
+                </div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_industry"><strong>Aerospace</strong></div>
+                <div class="cell"><span class="score-chip good editable" contenteditable="true" data-edit-id="acct3_score">88</span></div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_opps">1</div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct3_pipe">$100,000</div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct3_contact"><strong>Deckard Hull</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct3_role">Technical Lead</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct3_last">Dec 28</div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct3_last_type">Call</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct3_activity"><strong>Follow-up</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct3_activity_sub">Scheduled</div>
+                  </div>
+                </div>
+                <div class="ar-pill editable" contenteditable="true" data-edit-id="acct3_ar">AR: 0</div>
+              </div>
+
+              <!-- Row 4 -->
+              <div class="trow" data-acct-status="action open stale" data-acct-name="IMP Solutions (HRM)" data-acct-industry="Partner / Gov" data-acct-contact="IMP Team">
+                <div class="cell">
+                  <div class="account-name editable" contenteditable="true" data-edit-id="acct4_name" data-action="toast" data-message="Open account: IMP Solutions (HRM)">Mooring Digital</div>
+                  <div class="account-meta editable" contenteditable="true" data-edit-id="acct4_meta">AM: Allan</div>
+                </div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_industry"><strong>Manufacturing</strong></div>
+                <div class="cell"><span class="score-chip bad editable" contenteditable="true" data-edit-id="acct4_score">61</span></div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_opps">2</div>
+                <div class="cell hide-sm editable" contenteditable="true" data-edit-id="acct4_pipe">$220,000</div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct4_contact"><strong>Cole Current</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct4_role">Creative Director</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct4_last">Dec 15</div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct4_last_type">Call</div>
+                  </div>
+                </div>
+                <div class="cell hide-sm">
+                  <div class="stack">
+                    <div class="editable" contenteditable="true" data-edit-id="acct4_activity"><strong>Stale</strong></div>
+                    <div class="muted editable" contenteditable="true" data-edit-id="acct4_activity_sub">No activity completed in 24d</div>
+                  </div>
+                </div>
+                <div class="ar-pill editable" contenteditable="true" data-edit-id="acct4_ar">AR: 4</div>
+              </div>
             </div>
-            <span class="tag cool editable" contenteditable="true" data-edit-id="acctd_ar3_tag">COOL</span>
+
+            <div class="table-footer">
+              <div class="editable" contenteditable="true" data-edit-id="acct_pagination_left">1–4 of 24</div>
+              <div class="pager">
+                <a data-action="toast" data-message="Previous page">Previous</a>
+                <a data-action="toast" data-message="Next page">Next</a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="mini-label" style="margin:14px 0 8px;">ALL ACTIVITY</div>
-        <ul class="bullets editable" contenteditable="true" data-edit-id="acctd_all_activity">
-          <li>Call Joe</li>
-          <li>Meeting with Alex @ 2:00 PM</li>
-          <li>Follow up on quote for Jimmy</li>
-        </ul>
-      </div>
 
-      <div class="panel">
-        <div class="panel-title">SPS</div>
 
-        <div class="acctd-tabs">
-          <button class="tab active" type="button" data-sps="positioning">Positioning</button>
-          <button class="tab" type="button" data-sps="discovery">Discovery</button>
-          <button class="tab" type="button" data-sps="quote">Quote</button>
-          <button class="tab" type="button" data-sps="po">PO</button>
-          <button class="tab" type="button" data-sps="post">Post Close</button>
-        </div>
 
-        <div class="acctd-spsbox">
-          <div class="editable" contenteditable="true" data-edit-id="acctd_sps_copy">
-            SPS content placeholder<br/>
-            — prompts + structured steps per stage
+        <!-- ACCOUNT DETAIL (new full screen) -->
+
+        <section class="screen hidden" id="account-detail" data-pill="Acct">
+          <!-- Header -->
+          <div class="acctd-head">
+            <div>
+              <h2 id="acctdName" class="editable" contenteditable="true" data-edit-id="acctd_name">Town of Leland</h2>
+              <div class="acctd-sub editable" contenteditable="true" data-edit-id="acctd_sub">
+                AM: Allan Hillier AE:
+              </div>
+            </div>
+
+        <button class="acctd-back" type="button" data-go="accounts">
+          ← Accounts overview
+        </button>
+
           </div>
-        </div>
 
-        <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_create_sps">Create SPS activity</div>
-      </div>
-    </div>
+          <!-- 3-column grid -->
+          <div class="acctd-grid">
+            <!-- LEFT COLUMN -->
+            <div class="acctd-col">
+              <div class="panel">
+                <div class="panel-title">ACCOUNT SUMMARY</div>
+                <div class="kv">
+                  <div class="k">Account:</div>
+                  <div class="v editable" id="acctdSumAccount" contenteditable="true" data-edit-id="acctd_sum_account">Town of Leland</div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="acctd-col">
-      <div class="panel">
-        <div class="panel-title">HEALTH</div>
-        <div class="kv">
-          <div class="k">Score:</div>
-          <div class="v editable" id="acctdHealthScore" contenteditable="true" data-edit-id="acctd_health_score">82</div>
+                  <div class="k">AM:</div>
+                  <div class="v editable" id="acctdSumAM" contenteditable="true" data-edit-id="acctd_sum_AM">Allan Hillier</div>
 
-          <div class="k">Contacts:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_health_contacts">14</div>
+                  <div class="k">Sub Accounts:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_sub">3</div>
 
-          <div class="k">Champions:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_health_champions">2</div>
+                  <div class="k">Opportunities:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_opps">2 open</div>
 
-          <div class="k">Blockers:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_health_blockers">1</div>
-        </div>
-      </div>
+                  <div class="k">Inquiries:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_sum_inq">7</div>
+                </div>
 
-      <div class="panel">
-        <div class="panel-title">HISTORY</div>
-        <div class="kv">
-          <div class="k">Last Purchase:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_hist_item">HVMC Cluster</div>
+                <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_org_link">View Org Chart</div>
+              </div>
 
-          <div class="k">Date:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_hist_date">2025-11-12</div>
-        </div>
-      </div>
+              <div class="panel">
+                <div class="panel-title">SUB ACCOUNTS</div>
+                <ul class="bullets editable" contenteditable="true" data-edit-id="acctd_subaccounts">
+                  <li>IT Department</li>
+                  <li>Finance Department</li>
+                  <li>Research Lab</li>
+                </ul>
+              </div>
 
-      <div class="panel">
-        <div class="panel-title">QUALITY</div>
-        <div class="kv">
-          <div class="k">Radar:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_radar">Open</div>
+              <div class="panel">
+                <div class="panel-title">OPPORTUNITIES</div>
 
-          <div class="k">Tickets:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_tickets">3 (View)</div>
+                <div class="opp">
+                  <div class="opp-name editable" contenteditable="true" data-edit-id="acctd_opp1_name">NAS Refresh - 480TB</div>
+                  <div class="opp-meta editable" contenteditable="true" data-edit-id="acctd_opp1_meta">Stage: Discovery • Value: $120,000</div>
+                </div>
 
-          <div class="k">NCRs:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_ncrs">0</div>
-        </div>
-      </div>
+                <div class="opp">
+                  <div class="opp-name editable" contenteditable="true" data-edit-id="acctd_opp2_name">Backup Expansion</div>
+                  <div class="opp-meta editable" contenteditable="true" data-edit-id="acctd_opp2_meta">Stage: Quote • Value: $45,000</div>
+                </div>
 
-      <div class="panel">
-        <div class="panel-title">PRODUCTS / SERVICES</div>
-        <div class="kv">
-          <div class="k">Products:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_prod_products">View</div>
+                <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_view_all_opps">View all opportunities</div>
+              </div>
+            </div>
 
-          <div class="k">Services:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_prod_services">View</div>
-        </div>
-      </div>
+            <!-- CENTER COLUMN -->
+            <div class="acctd-col">
+              <div class="panel">
+                <div class="panel-title">SALES ENGINE</div>
 
-      <div class="panel">
-        <div class="panel-title">ACCOUNTING</div>
-        <div class="kv">
-          <div class="k">Credit:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_acct_credit">Good</div>
-
-          <div class="k">Terms:</div>
-          <div class="v editable" contenteditable="true" data-edit-id="acctd_acct_terms">Net 30</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <div class="mini-label">ACTIVITIES</div>
+                  <div class="acctd-actions">
+                    <!--Commenting out for new fields Roger suggested on Feb 3rd ----- <button class="mini dark" type="button" data-action="toast" data-message="Place Call">Place Call</button>
+                    <button class="mini" type="button" data-action="toast" data-message="Schedule Meeting">Schedule Meeting</button>
+                    <button class="mini" type="button" data-action="toast" data-message="Create Task">Create Task</button>
+                    <button class="mini" type="button" data-action="toast" data-message="Log Note">Log Note</button>-->
+        <button class="mini dark" type="button" data-open-activity="call">Schedule Call</button>
+        <button class="mini" type="button" data-open-activity="meeting">Schedule Meeting</button>
+        <button class="mini" type="button" data-open-activity="task">Create Task</button>
 
 
-        <!-- LEADS -->
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+
+                <div class="mini-label" style="margin:12px 0 8px;">ACTION REQUIRED</div>
+
+                <div class="arlist">
+                  <div class="aritem">
+                    <span class="chk" aria-hidden="true"></span>
+                    <div class="ar-main">
+                      <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar1_title">Send recap email to Alex</div>
+                      <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar1_meta">Triggered by: Meeting completed • Due: Today</div>
+                    </div>
+                    <span class="tag hot editable" contenteditable="true" data-edit-id="acctd_ar1_tag">HOT</span>
+                  </div>
+
+                  <div class="aritem">
+                    <span class="chk" aria-hidden="true"></span>
+                    <div class="ar-main">
+                      <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar2_title">Update opportunity stage: Discovery → Quote</div>
+                      <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar2_meta">Triggered by: Quote requested • Due: Tomorrow</div>
+                    </div>
+                    <span class="tag warm editable" contenteditable="true" data-edit-id="acctd_ar2_tag">WARM</span>
+                  </div>
+
+                  <div class="aritem">
+                    <span class="chk" aria-hidden="true"></span>
+                    <div class="ar-main">
+                      <div class="ar-title editable" contenteditable="true" data-edit-id="acctd_ar3_title">Follow up on quote for Jimmy</div>
+                      <div class="ar-meta editable" contenteditable="true" data-edit-id="acctd_ar3_meta">Triggered by: Quote sent • Due: 3 days</div>
+                    </div>
+                    <span class="tag cool editable" contenteditable="true" data-edit-id="acctd_ar3_tag">COOL</span>
+                  </div>
+                </div>
+
+                <div class="mini-label" style="margin:14px 0 8px;">ALL ACTIVITY</div>
+                <ul class="bullets editable" contenteditable="true" data-edit-id="acctd_all_activity">
+                  <li>Call Joe</li>
+                  <li>Meeting with Alex @ 2:00 PM</li>
+                  <li>Follow up on quote for Jimmy</li>
+                </ul>
+              </div>
+
+              <div class="panel">
+                <div class="panel-title">SPS</div>
+
+                <div class="acctd-tabs">
+                  <button class="tab active" type="button" data-sps="positioning">Positioning</button>
+                  <button class="tab" type="button" data-sps="discovery">Discovery</button>
+                  <button class="tab" type="button" data-sps="quote">Quote</button>
+                  <button class="tab" type="button" data-sps="po">PO</button>
+                  <button class="tab" type="button" data-sps="post">Post Close</button>
+                </div>
+
+                <div class="acctd-spsbox">
+                  <div class="editable" contenteditable="true" data-edit-id="acctd_sps_copy">
+                    SPS content placeholder<br/>
+                    — prompts + structured steps per stage
+                  </div>
+                </div>
+
+                <div class="panel-link editable" contenteditable="true" data-edit-id="acctd_create_sps">Create SPS activity</div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="acctd-col">
+              <div class="panel">
+                <div class="panel-title">HEALTH</div>
+                <div class="kv">
+                  <div class="k">Score:</div>
+                  <div class="v editable" id="acctdHealthScore" contenteditable="true" data-edit-id="acctd_health_score">82</div>
+
+                  <div class="k">Contacts:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_health_contacts">14</div>
+
+                  <div class="k">Champions:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_health_champions">2</div>
+
+                  <div class="k">Blockers:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_health_blockers">1</div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-title">HISTORY</div>
+                <div class="kv">
+                  <div class="k">Last Purchase:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_hist_item">HVMC Cluster</div>
+
+                  <div class="k">Date:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_hist_date">2025-11-12</div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-title">QUALITY</div>
+                <div class="kv">
+                  <div class="k">Radar:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_radar">Open</div>
+
+                  <div class="k">Tickets:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_tickets">3 (View)</div>
+
+                  <div class="k">NCRs:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_qual_ncrs">0</div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-title">PRODUCTS / SERVICES</div>
+                <div class="kv">
+                  <div class="k">Products:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_prod_products">View</div>
+
+                  <div class="k">Services:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_prod_services">View</div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-title">ACCOUNTING</div>
+                <div class="kv">
+                  <div class="k">Credit:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_acct_credit">Good</div>
+
+                  <div class="k">Terms:</div>
+                  <div class="v editable" contenteditable="true" data-edit-id="acctd_acct_terms">Net 30</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+                <!-- LEADS -->
+        
+
         <section class="screen hidden" id="leads" data-pill="S3">
-          <h2 class="editable" contenteditable="true" data-edit-id="leads_h2">Leads</h2>
-          <p class="editable" contenteditable="true" data-edit-id="leads_p">Inbound + outbound leads, triage, and nurture queues.</p>
+                  <h2 class="editable" contenteditable="true" data-edit-id="leads_h2">Leads</h2>
+                  <p class="editable" contenteditable="true" data-edit-id="leads_p">Inbound + outbound leads, triage, and nurture queues.</p>
 
-          <div class="grid">
-            <div class="panel">
-              <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="leads_inbox_h3">Lead Inbox</h3>
-              <div class="hint" data-notes><strong>Notes:</strong> New leads that need first touch. Add SLA / age.</div>
-              <div class="row" style="flex-direction:column;gap:8px;">
-                <button class="btn" data-action="toast" data-message="Open lead">New lead — needs qualification</button>
-                <button class="btn" data-action="toast" data-message="Open lead">Web form — pricing question</button>
+                  <div class="grid">
+                    <div class="panel">
+                      <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="leads_inbox_h3">Lead Inbox</h3>
+                      <div class="hint" data-notes><strong>Notes:</strong> New leads that need first touch. Add SLA / age.</div>
+                      <div class="row" style="flex-direction:column;gap:8px;">
+                        <button class="btn" data-action="toast" data-message="Open lead">New lead — needs qualification</button>
+                        <button class="btn" data-action="toast" data-message="Open lead">Web form — pricing question</button>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="leads_nurture_h3">Nurture</h3>
+                      <div class="hint" data-notes><strong>Notes:</strong> Follow-ups and drip sequences. Add next-touch dates.</div>
+                      <div class="row" style="flex-direction:column;gap:8px;">
+                        <button class="btn" data-action="toast" data-message="Nurture">Nurture list (placeholder)</button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- PIPELINE -->
+           <!-- PIPELINE -->
+
+        <section class="screen hidden" id="pipeline" data-pill="S4">
+          <h2 class="editable" contenteditable="true" data-edit-id="pipe_h2">Pipeline</h2>
+          <p class="editable" contenteditable="true" data-edit-id="pipe_p">Deals by stage, forecast, and next steps.</p>
+
+
+          <!-- optional mini nav (mirrors accounts) 
+          <div class="accounts-mini-nav" style="margin-top:12px;">
+            <div class="seg" aria-label="Pipeline mini navigation">
+              <button class="seg-btn" type="button" data-go="dashboard">Dashboard</button>
+              <button class="seg-btn" type="button" data-go="accounts">Accounts</button>
+              <button class="seg-btn" type="button" aria-current="page">Pipeline</button>
+            </div>
+          </div>-->
+
+          <!-- PIPELINE LIST -->
+          <div class="accounts-card" style="margin-top:12px;">
+            <div class="accounts-toolbar">
+              <div class="label editable" contenteditable="true" data-edit-id="pipe_list_label">My Opportunities</div>
+
+              <div class="accounts-tabs" role="tablist" aria-label="Pipeline list tabs">
+                <button class="pilltab" type="button" data-pipe-tab="all" aria-current="page">All</button>
+                <button class="pilltab" type="button" data-pipe-tab="closing">Closing Soon</button>
+                <button class="pilltab" type="button" data-pipe-tab="risk">At Risk</button>
+                <button class="pilltab" type="button" data-pipe-tab="stale">Stale</button>
+              </div>
+
+              <div class="accounts-toolbar-right">
+                <input class="search" id="pipeSearch" type="search" placeholder="Search deals or accounts..." aria-label="Search pipeline" />
+                <button class="btn" type="button" id="pipeToggleGroup">Group: Stage</button>
+                <button class="btn primary" type="button" data-action="toast" data-message="New opportunity (prototype)">+ New Opportunity</button>
               </div>
             </div>
-            <div class="panel">
-              <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="leads_nurture_h3">Nurture</h3>
-              <div class="hint" data-notes><strong>Notes:</strong> Follow-ups and drip sequences. Add next-touch dates.</div>
-              <div class="row" style="flex-direction:column;gap:8px;">
-                <button class="btn" data-action="toast" data-message="Nurture">Nurture list (placeholder)</button>
+
+            <div class="table" id="pipeTable"></div>
+
+            <div class="table-footer">
+              <div class="editable" contenteditable="true" data-edit-id="pipe_pagination_left">Showing demo Opportunities</div>
+              <div class="pager">
+                <a data-action="toast" data-message="Previous page">Previous</a>
+                <a data-action="toast" data-message="Next page">Next</a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- PIPELINE -->
-   <!-- PIPELINE -->
-<section class="screen hidden" id="pipeline" data-pill="S4">
-  <h2 class="editable" contenteditable="true" data-edit-id="pipe_h2">Pipeline</h2>
-  <p class="editable" contenteditable="true" data-edit-id="pipe_p">Deals by stage, forecast, and next steps.</p>
-
-
-  <!-- optional mini nav (mirrors accounts) 
-  <div class="accounts-mini-nav" style="margin-top:12px;">
-    <div class="seg" aria-label="Pipeline mini navigation">
-      <button class="seg-btn" type="button" data-go="dashboard">Dashboard</button>
-      <button class="seg-btn" type="button" data-go="accounts">Accounts</button>
-      <button class="seg-btn" type="button" aria-current="page">Pipeline</button>
-    </div>
-  </div>-->
-
-  <!-- PIPELINE LIST -->
-  <div class="accounts-card" style="margin-top:12px;">
-    <div class="accounts-toolbar">
-      <div class="label editable" contenteditable="true" data-edit-id="pipe_list_label">My Opportunities</div>
-
-      <div class="accounts-tabs" role="tablist" aria-label="Pipeline list tabs">
-        <button class="pilltab" type="button" data-pipe-tab="all" aria-current="page">All</button>
-        <button class="pilltab" type="button" data-pipe-tab="closing">Closing Soon</button>
-        <button class="pilltab" type="button" data-pipe-tab="risk">At Risk</button>
-        <button class="pilltab" type="button" data-pipe-tab="stale">Stale</button>
-      </div>
-
-      <div class="accounts-toolbar-right">
-        <input class="search" id="pipeSearch" type="search" placeholder="Search deals or accounts..." aria-label="Search pipeline" />
-        <button class="btn" type="button" id="pipeToggleGroup">Group: Stage</button>
-        <button class="btn primary" type="button" data-action="toast" data-message="New opportunity (prototype)">+ New Opportunity</button>
-      </div>
-    </div>
-
-    <div class="table" id="pipeTable"></div>
-
-    <div class="table-footer">
-      <div class="editable" contenteditable="true" data-edit-id="pipe_pagination_left">Showing demo Opportunities</div>
-      <div class="pager">
-        <a data-action="toast" data-message="Previous page">Previous</a>
-        <a data-action="toast" data-message="Next page">Next</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- optional mini nav (mirrors accounts) 
-    <div class="accounts-mini-nav">
-      <div class="seg" aria-label="Pipeline mini navigation">
-        <button class="seg-btn" type="button" data-go="dashboard">Dashboard</button>
-        <button class="seg-btn" type="button" data-go="accounts">Accounts</button>
-        <button class="seg-btn" type="button" aria-current="page">Pipeline</button>
-      </div>
-    </div>
-  </div>-->
-
-  <div class="accounts-card">
-    <div class="accounts-toolbar">
-      <div class="label editable" contenteditable="true" data-edit-id="pipe_list_label">My Opportunities</div>
-
-      <div class="accounts-tabs" role="tablist" aria-label="Pipeline list tabs">
-        <button class="pilltab" type="button" data-pipe-tab="all" aria-current="page">All</button>
-        <button class="pilltab" type="button" data-pipe-tab="closing">Closing Soon</button>
-        <button class="pilltab" type="button" data-pipe-tab="risk">At Risk</button>
-        <button class="pilltab" type="button" data-pipe-tab="stale">Stale</button>
-      </div>
-
-      <div class="accounts-toolbar-right">
-        <input class="search" id="pipeSearch" type="search" placeholder="Search deals or accounts..." aria-label="Search pipeline" />
-        <button class="btn" type="button" id="pipeToggleGroup">Group: Stage</button>
-        <button class="btn primary" type="button" data-action="toast" data-message="New opportunity (prototype)">+ New Opportunity</button>
-      </div>
-    </div>
-
-    <!-- Render target -->
-    <div class="table" id="pipeTable"></div>
-
-    <div class="table-footer">
-      <div class="editable" contenteditable="true" data-edit-id="pipe_pagination_left">Showing demo Opportunities</div>
-      <div class="pager">
-        <a data-action="toast" data-message="Previous page">Previous</a>
-        <a data-action="toast" data-message="Next page">Next</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-        <!-- REPORTING -->
         <section class="screen hidden" id="reporting" data-pill="S5">
-          <h2 class="editable" contenteditable="true" data-edit-id="report_h2">Reporting</h2>
-          <p class="editable" contenteditable="true" data-edit-id="report_p">Performance, activity, and pipeline analytics.</p>
+                  <h2 class="editable" contenteditable="true" data-edit-id="report_h2">Reporting</h2>
+                  <p class="editable" contenteditable="true" data-edit-id="report_p">Performance, activity, and pipeline analytics.</p>
 
-          <div class="grid">
-            <div class="panel">
-              <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="report_kpi_h3">KPIs</h3>
-              <div class="hint" data-notes><strong>Notes:</strong> KPI cards + date ranges live here.</div>
-              <button class="btn" data-action="toast" data-message="Change date range">Date Range</button>
-            </div>
-            <div class="panel">
-              <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="report_team_h3">Team View</h3>
-              <div class="hint" data-notes><strong>Notes:</strong> Filters by rep/region, rollups for management.</div>
-              <button class="btn" data-action="toast" data-message="View team report">Open Team Report</button>
-            </div>
-          </div>
-        </section>
+                  <div class="grid">
+                    <div class="panel">
+                      <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="report_kpi_h3">KPIs</h3>
+                      <div class="hint" data-notes><strong>Notes:</strong> KPI cards + date ranges live here.</div>
+                      <button class="btn" data-action="toast" data-message="Change date range">Date Range</button>
+                    </div>
+                    <div class="panel">
+                      <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="report_team_h3">Team View</h3>
+                      <div class="hint" data-notes><strong>Notes:</strong> Filters by rep/region, rollups for management.</div>
+                      <button class="btn" data-action="toast" data-message="View team report">Open Team Report</button>
+                    </div>
+                  </div>
+                </section>
 
-        <!-- ADMIN -->
+                <!-- ADMIN -->
+        
+
         <section class="screen hidden" id="admin" data-pill="S6">
-          <h2 class="editable" contenteditable="true" data-edit-id="admin_h2">Admin</h2>
-          <p class="editable" contenteditable="true" data-edit-id="admin_p">Management / configuration area (permissions, routing, templates).</p>
+                  <h2 class="editable" contenteditable="true" data-edit-id="admin_h2">Admin</h2>
+                  <p class="editable" contenteditable="true" data-edit-id="admin_p">Management / configuration area (permissions, routing, templates).</p>
 
-          <div class="panel">
-            <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="admin_tools_h3">Admin Tools</h3>
-            <div class="row">
-              <button class="btn" data-action="toast" data-message="User management">Users & Roles</button>
-              <button class="btn" data-action="toast" data-message="Templates">Templates</button>
-              <button class="btn" data-action="toast" data-message="Routing">Lead Routing</button>
-            </div>
-            <div class="hint" data-notes><strong>Notes:</strong> Keep this limited for management only.</div>
-          </div>
-        </section>
+                  <div class="panel">
+                    <h3 style="margin:0 0 10px;font-size:14px;" class="editable" contenteditable="true" data-edit-id="admin_tools_h3">Admin Tools</h3>
+                    <div class="row">
+                      <button class="btn" data-action="toast" data-message="User management">Users & Roles</button>
+                      <button class="btn" data-action="toast" data-message="Templates">Templates</button>
+                      <button class="btn" data-action="toast" data-message="Routing">Lead Routing</button>
+                    </div>
+                    <div class="hint" data-notes><strong>Notes:</strong> Keep this limited for management only.</div>
+                  </div>
+                </section>
 
-        <!-- SETTINGS -->
+                <!-- SETTINGS -->
+        
+
         <section class="screen hidden" id="settings" data-pill="S7">
-          <h2 class="editable" contenteditable="true" data-edit-id="settings_h2">Settings</h2>
-          <p class="editable" contenteditable="true" data-edit-id="settings_p">Preferences screen (placeholder).</p>
+                  <h2 class="editable" contenteditable="true" data-edit-id="settings_h2">Settings</h2>
+                  <p class="editable" contenteditable="true" data-edit-id="settings_p">Preferences screen (placeholder).</p>
 
-          <div class="grid">
-            <div class="panel">
-              <h3 style="margin: 0 0 10px; font-size: 14px;" class="editable" contenteditable="true" data-edit-id="settings_pref_h3">Preferences</h3>
-              <div class="row">
-                <button class="btn" data-action="toast" data-message="Toggled Dark Mode (placeholder)" type="button">Toggle Dark Mode</button>
-                <button class="btn" data-action="toast" data-message="Changed Notifications (placeholder)" type="button">Notifications</button>
-              </div>
-              <div class="row" style="margin-top: 10px;">
-                <button class="btn primary" data-go="dashboard" type="button">Save → Dashboard</button>
-                <button class="btn" data-go="dashboard" type="button">Cancel → Dashboard</button>
-              </div>
-            </div>
+                  <div class="grid">
+                    <div class="panel">
+                      <h3 style="margin: 0 0 10px; font-size: 14px;" class="editable" contenteditable="true" data-edit-id="settings_pref_h3">Preferences</h3>
+                      <div class="row">
+                        <button class="btn" data-action="toast" data-message="Toggled Dark Mode (placeholder)" type="button">Toggle Dark Mode</button>
+                        <button class="btn" data-action="toast" data-message="Changed Notifications (placeholder)" type="button">Notifications</button>
+                      </div>
+                      <div class="row" style="margin-top: 10px;">
+                        <button class="btn primary" data-go="dashboard" type="button">Save → Dashboard</button>
+                        <button class="btn" data-go="dashboard" type="button">Cancel → Dashboard</button>
+                      </div>
+                    </div>
 
-            <div class="panel">
-              <h3 style="margin: 0 0 10px; font-size: 14px;" class="editable" contenteditable="true" data-edit-id="settings_about_h3">About</h3>
-              <p class="editable" contenteditable="true" data-edit-id="settings_about_p" style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5;">
-              </p>
-            </div>
-          </div>
-        </section>
+                    <div class="panel">
+                      <h3 style="margin: 0 0 10px; font-size: 14px;" class="editable" contenteditable="true" data-edit-id="settings_about_h3">About</h3>
+                      <p class="editable" contenteditable="true" data-edit-id="settings_about_p" style="margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5;">
+                      </p>
+                    </div>
+                  </div>
+                </section>
+      </div>
+
       </div>
     </section>
   </main>
@@ -952,7 +876,9 @@ Buttons for Activitines/Sales engine -- don't want to show them on the main dash
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script>
+  
+
+<script>
     // --- Simple navigation + history for clickable wireframes ---
 const screensEl = document.getElementById('screens');
 const navEl = document.getElementById('nav');
@@ -1657,7 +1583,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   </script>
-</body>
 
   <script defer src="assets/js/data.js"></script>
   <script defer src="assets/js/pipeline.js"></script>
