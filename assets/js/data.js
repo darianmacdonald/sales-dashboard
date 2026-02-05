@@ -3,8 +3,7 @@
 // NOTE: This must load before pipeline.js
 
 const CRM_DATA = {
-  // ✅ Paste your entire CRM_DATA object here (unchanged) from your original file.
-  // It begins with: accounts: [ { id: "acct_nb", name: "Northbound Labs", ... } ]
+  //  CRM_DATA lives here - accounts: [ { id: "acct_nb", name: "Northbound Labs", ... } ]
   accounts: [
     {
       id: "acct_nb",

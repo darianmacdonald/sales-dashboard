@@ -401,7 +401,7 @@
 
     .mini:hover { background: var(--surface2Hover); }
 
-    /* Category-colored CTAs */
+    /* Category colored CTAs --- call, email, quote etc --- added SPS for List overview*/
     .mini[data-cta-type="call"] {
       background: var(--callBg);
       color: var(--callText);
@@ -422,6 +422,14 @@
       border-color: var(--quoteBorder);
       font-weight: 900;
     }
+
+    .mini[data-cta-type="sps"] {
+      background: rgba(245, 158, 11, .16);
+      color: #92400e;
+      border-color: rgba(146, 64, 14, .28);
+      font-weight: 900;
+    }
+
 
     .right-cta { min-width: 96px; text-align: center; }
 

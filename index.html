@@ -6,6 +6,12 @@
   <title>CRM revamp 2026 </title>
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
+<style>
+ .screen.hidden {
+  display: none !important;
+}
+</style>
+
 </head>
 
 <body>
@@ -153,6 +159,28 @@
         </div>
       </div>
 
+  <div class="item">
+    <span class="chk"></span>
+
+  <div class="item-main">
+       <div class="item-title" contenteditable="true">
+       SPS Review – Northbound Labs
+     </div>
+        <div class="item-meta" contenteditable="true">
+        Weekly compliance check
+      </div>
+  </div>
+
+  <div class="item-right">
+    <button
+      class="mini right-cta"
+      data-cta-type="sps"
+      contenteditable="true">
+      REVIEW
+    </button>
+  </div>
+</div>
+
       <div class="item" role="button" tabindex="0" data-action="toast" data-message="Email recap to Alex">
         <span class="chk" aria-hidden="true"></span>
         <div class="item-main">
@@ -253,8 +281,9 @@
 
               <div class="accounts-tabs" role="tablist" aria-label="Account list tabs">
                 <button class="pilltab" type="button" data-acct-tab="action">Action Required</button>
-                <button class="pilltab" type="button" data-acct-tab="open">Open Opportunities</button>
-                <button class="pilltab" type="button" data-acct-tab="stale">Stale</button>
+                <button class="pilltab" type="button" data-acct-tab="sps">SPS Tasks</button>
+               <!-- <button class="pilltab" type="button" data-acct-tab="open">Open Opportunities</button>
+                <button class="pilltab" type="button" data-acct-tab="stale">Stale</button>-->
               </div>
 
               <div class="accounts-toolbar-right">
@@ -275,7 +304,46 @@
                 <div class="hide-sm">Last Contact</div>
                 <div class="hide-sm">Last Activity</div>
                 <div></div>
-              </div>
+              </div> <!-- end of #acctTable -->
+
+<!-- SPS TASKS (Overview Tab List) -->
+<div class="table hidden" id="spsTasksTable">
+  <div class="thead" style="grid-template-columns: 1.0fr 1.4fr 1.6fr 1.0fr 1.0fr 1.2fr;">
+    <div>Call</div>
+    <div>Contact</div>
+    <div>Account</div>
+    <div class="editable" contenteditable="true" data-edit-id="sps_col4">Field 4</div>
+    <div class="editable" contenteditable="true" data-edit-id="sps_col5">Field 5</div>
+    <div class="editable" contenteditable="true" data-edit-id="sps_col6">Field 6</div>
+  </div>
+
+  <div class="trow" style="grid-template-columns: 1.0fr 1.4fr 1.6fr 1.0fr 1.0fr 1.2fr;">
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r1_c1">Call</div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r1_c2">Marina Wells</div>
+    <div class="cell">
+      <div class="account-name" style="cursor:pointer;">Northbound Labs</div>
+      <div class="muted">AM: Allan</div>
+    </div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r1_c4"></div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r1_c5"></div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r1_c6"></div>
+  </div>
+
+  <div class="trow" style="grid-template-columns: 1.0fr 1.4fr 1.6fr 1.0fr 1.0fr 1.2fr;">
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r2_c1">Email</div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r2_c2">Deckard Hull</div>
+    <div class="cell">
+      <div class="account-name" style="cursor:pointer;">Mooring Digital</div>
+      <div class="muted">AM: Allan</div>
+    </div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r2_c4"></div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r2_c5"></div>
+    <div class="cell editable" contenteditable="true" data-edit-id="sps_r2_c6"></div>
+  </div>
+</div>
+
+
+
 
               <!-- Row 1 -->
               <div class="trow" data-acct-status="my action open" data-acct-name="Town of Leland" data-acct-industry="Government" data-acct-contact="Marina Wells">
