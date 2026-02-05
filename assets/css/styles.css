@@ -213,6 +213,19 @@
       background: color-mix(in srgb, var(--focus) 18%, transparent);
     }
 
+    /* =========================
+   Screen-based navigation
+   ========================= */
+
+    .screen {
+      display: none;
+    }
+
+    .screen:not(.hidden) {
+      display: block;
+    }
+
+
     .screen-wrap {
       padding: 18px;
       display: grid;
