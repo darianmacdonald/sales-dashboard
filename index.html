@@ -92,7 +92,7 @@
 
             <div class="screen-wrap" id="screens">
         <!-- DASHBOARD (landing) -->
-        <section class="screen" id="dashboard" data-pill="Home">
+        <section class="screen active" id="dashboard" data-pill="Home">
 <div class="grid" style="margin-top: 12px;">
 
   <!-- LEFT: Today's Meetings -->
@@ -253,7 +253,7 @@
         </div>
         </section>
 
-        <section class="screen hidden" id="accounts" data-pill="S2">
+        <section class="screen" id="accounts" data-pill="S2">
           <div class="accounts-header">
             <div>
               <h2 class="editable" contenteditable="true" data-edit-id="accounts_h2">Accounts Overview</h2>
@@ -477,7 +477,7 @@
 
 
         <!-- ACCOUNT DETAIL (this is the indivual detailed screen for each account) -->
-        <section class="screen hidden" id="account-detail" data-pill="Acct">
+        <section class="screen" id="account-detail" data-pill="Acct">
           <!-- Header -->
           <div class="acctd-head">
             <div>
@@ -709,7 +709,7 @@
                 <!-- LEADS -->
         
 
-        <section class="screen hidden" id="leads" data-pill="S3">
+        <section class="screen" id="leads" data-pill="S3">
                   <h2 class="editable" contenteditable="true" data-edit-id="leads_h2">Leads</h2>
                   <p class="editable" contenteditable="true" data-edit-id="leads_p">Inbound + outbound leads, triage, and nurture queues.</p>
 
@@ -734,7 +734,7 @@
 
 
 <!-- Master SPS List overview -->
-<section class="screen hidden" id="sps-master">
+<section class="screen" id="sps-master">
   <div class="accounts-header">
     <h2>SPS Tasks</h2>
     <p class="muted">All SPS follow-ups across all accounts</p>
@@ -764,7 +764,7 @@
 
                 <!-- PIPELINE -->
 
-        <section class="screen hidden" id="pipeline" data-pill="S4">
+        <section class="screen" id="pipeline" data-pill="S4">
           <h2 class="editable" contenteditable="true" data-edit-id="pipe_h2">Pipeline</h2>
           <p class="editable" contenteditable="true" data-edit-id="pipe_p">Deals by stage, forecast, and next steps.</p>
 
@@ -809,7 +809,7 @@
           </div>
         </section>
 
-        <section class="screen hidden" id="reporting" data-pill="S5">
+        <section class="screen" id="reporting" data-pill="S5">
                   <h2 class="editable" contenteditable="true" data-edit-id="report_h2">Reporting</h2>
                   <p class="editable" contenteditable="true" data-edit-id="report_p">Performance, activity, and pipeline analytics.</p>
 
@@ -830,7 +830,7 @@
                 <!-- ADMIN -->
         
 
-        <section class="screen hidden" id="admin" data-pill="S6">
+        <section class="screen" id="admin" data-pill="S6">
                   <h2 class="editable" contenteditable="true" data-edit-id="admin_h2">Admin</h2>
                   <p class="editable" contenteditable="true" data-edit-id="admin_p">Management / configuration area (permissions, routing, templates).</p>
 
@@ -848,7 +848,7 @@
                 <!-- SETTINGS -->
         
 
-        <section class="screen hidden" id="settings" data-pill="S7">
+        <section class="screen" id="settings" data-pill="S7">
                   <h2 class="editable" contenteditable="true" data-edit-id="settings_h2">Settings</h2>
                   <p class="editable" contenteditable="true" data-edit-id="settings_p">Preferences screen (placeholder).</p>
 
@@ -1262,8 +1262,9 @@ document.addEventListener('click', (e) => {
         historyStack.push(currentScreenId);
       }
 
-      screensEl.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
-      next.classList.remove('hidden');
+    screensEl.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+next.classList.add('active');
+
 
       currentScreenId = id;
       setActiveNav(id);

@@ -217,13 +217,13 @@
    Screen-based navigation
    ========================= */
 
-    .screen {
-      display: none;
-    }
+  .screen {
+  display: none;
+}
 
-    .screen:not(.hidden) {
-      display: block;
-    }
+.screen.active {
+  display: block;
+}
 
     /* Shared utility */
 .hidden {
