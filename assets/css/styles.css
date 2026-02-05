@@ -225,6 +225,10 @@
       display: block;
     }
 
+    /* Shared utility */
+.hidden {
+  display: none !important;
+}
 
     .screen-wrap {
       padding: 18px;
