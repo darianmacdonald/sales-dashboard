@@ -281,7 +281,7 @@
 
               <div class="accounts-tabs" role="tablist" aria-label="Account list tabs">
                 <button class="pilltab" type="button" data-acct-tab="action">Action Required</button>
-                <button class="pilltab" type="button" data-acct-tab="sps">SPS Tasks</button>
+                <button class="pilltab" type="button" data-go="sps-master">SPS Tasks</button>
                <!-- <button class="pilltab" type="button" data-acct-tab="open">Open Opportunities</button>
                 <button class="pilltab" type="button" data-acct-tab="stale">Stale</button>-->
               </div>
@@ -483,8 +483,7 @@
 
 
 
-        <!-- ACCOUNT DETAIL (new full screen) -->
-
+        <!-- ACCOUNT DETAIL (this is the indivual detailed screen for each account) -->
         <section class="screen hidden" id="account-detail" data-pill="Acct">
           <!-- Header -->
           <div class="acctd-head">
@@ -740,8 +739,37 @@
                   </div>
                 </section>
 
+
+<!-- Master SPS List overview -->
+<section class="screen hidden" id="sps-master">
+  <div class="accounts-header">
+    <h2>SPS Tasks</h2>
+    <p class="muted">All SPS follow-ups across all accounts</p>
+
+    <button class="btn" type="button" data-go="accounts">
+      ← Back to Accounts
+    </button>
+  </div>
+
+  <div class="accounts-card">
+    <div class="list">
+      <div class="item">
+        <span class="chk" aria-hidden="true"></span>
+        <div class="item-main">
+          <div class="item-title">
+            <strong>Northbound Labs</strong> — Send recap email
+          </div>
+          <div class="item-meta">
+            Due today • SPS: Discovery
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
                 <!-- PIPELINE -->
-           <!-- PIPELINE -->
 
         <section class="screen hidden" id="pipeline" data-pill="S4">
           <h2 class="editable" contenteditable="true" data-edit-id="pipe_h2">Pipeline</h2>
